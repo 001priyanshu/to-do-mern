@@ -1,0 +1,169 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    .app {
+        border: 2px solid white;
+        box-shadow: 0 0 6px 2px gray;
+        width: 40%;
+        height: 90%;
+        margin: 0 auto;
+        margin-top: 7%;
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid gray;
+            span {
+                display: inline-block;
+                margin: 5px 10px;
+                h1 {
+                    color: black;
+                }
+            }
+        }
+
+        .fields {
+            margin-top: 2%;
+            padding-left: 1%;
+            height: 20%;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            padding-bottom: 1%;
+            border-bottom: 2px solid gray;
+            .inputs {
+                border: 2px solid grey;
+                width: 98%;
+                height: 90%;
+                border-radius: 5%;
+                label {
+                    font-weight: 700;
+                    margin-left: 2%;
+                }
+
+                input {
+                    border: none;
+                    margin-left: 5px;
+                    padding: 3px 2px 2px 0px;
+                    padding-left: 1px;
+                }
+
+                select {
+                    border: transparent;
+                    margin-left: 4px;
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        .buttons {
+            height: 20%;
+            display: flex;
+            min-width: 50%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid gray;
+            .btn {
+                width: 40%;
+                height: 55%;
+                transition: all 0.3s;
+                border: none;
+                cursor: default;
+                button {
+                    width: 90%;
+                    height: 75%;
+                    background-color: white;
+                    border-radius: 7%;
+                    span {
+                        margin-right: 4%;
+                    }
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        .display {
+            padding-top: 2%;
+            display: flex;
+            justify-content: space-evenly;
+            .schedule {
+                width: 30%;
+                padding: 0 3px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    .category {
+                        border: none;
+                        border-bottom: 1px solid gray;
+                        padding-left: 4px;
+                        padding-bottom: 3px;
+                        font-weight: 500;
+                        margin-top: 2px;
+                        text-align: center;
+                        background-color: white;
+                        // width: 70%;
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:active {
+                            transform: scale(0.93);
+                        }
+                    }
+                }
+            }
+            .tasks {
+                width: 60%;
+                border-left: 1px solid grey;
+                padding-left: 2%;
+                overflow: auto;
+                .task {
+                    height: 20%;
+                    margin: 0;
+                    margin-top: 2%;
+                    display: flex;
+                    .field {
+                        width: 90%;
+                        > span {
+                            display: block;
+                            margin-left: 2%;
+                            span {
+                                margin-right: 2%;
+                            }
+                        }
+                    }
+                    .categories {
+                        margin-top: 4%;
+                        margin-right: 4%;
+                        span {
+                            padding: 3px 4px;
+                            background-color: rgb(38, 218, 38);
+                            color: white;
+                            border: 1px solid black;
+                            letter-spacing: 0.5px;
+                            font-weight: 500;
+                        }
+                    }
+                    .update {
+                        margin-top: 3%;
+                        span {
+                            font-size: 1.2rem;
+                            transition: all 0.5s;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                            &:active {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
